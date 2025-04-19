@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Secreta</title>
+    <style>
+        body {
+            background-image: url('foto1.png'), url('foto2.png'), url('foto3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: change 15s infinite;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
+        @keyframes change {
+            0% { background-image: url('foto1.png'); }
+            33% { background-image: url('foto2.png'); }
+            66% { background-image: url('foto3.png'); }
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    <h1>Você é o <a href="romantico.html">amor</a> da minha vida. Eu te amo muito!!</h1>
+</body>
+</html>
