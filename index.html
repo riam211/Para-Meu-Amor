@@ -1,38 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Página Secreta</title>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Para Meu Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-image: url('foto1.png'), url('foto2.png'), url('foto3.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation: change 15s infinite;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            padding-top: 20%;
-        }
-        @keyframes change {
-            0% { background-image: url('foto1.png'); }
-            33% { background-image: url('foto2.png'); }
-            66% { background-image: url('foto3.png'); }
-        }
-        a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+      body {
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        background-color: #fff0f5;
+        color: #ff69b4;
+        padding: 40px;
+      }
+      #contador {
+        font-size: 26px;
+        margin-top: 40px;
+      }
     </style>
-</head>
-<body>
-    <audio autoplay loop>
-        <source src="musica.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-    <h1>Você é o <a href="romantico.html">amor</a> da minha vida. Eu te amo muito!!</h1>
-</body>
+  </head>
+  <body>
+    <h1>Oi, meu amor!</h1>
+    <p>Este site é só pra você...</p>
+
+    <div id="contador">
+      Estamos juntos há <span id="dias">0</span> dias, <span id="horas">0</span> horas e <span id="minutos">0</span> minutos.
+    </div>
+
+    <script>
+      function atualizarContador() {
+        const inicio = new Date("2022-07-30T00:00:00");
+        const agora = new Date();
+        const diff = agora - inicio;
+
+        const minutos = Math.floor(diff / (1000 * 60)) % 60;
+        const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        document.getElementById("dias").textContent = dias;
+        document.getElementById("horas").textContent = horas;
+        document.getElementById("minutos").textContent = minutos;
+      }
+
+      setInterval(atualizarContador, 1000);
+      atualizarContador();
+    </script>
+  </body>
 </html>
