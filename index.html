@@ -8,30 +8,55 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
     <style>
-      #contador {
+      body {
         font-family: 'Dancing Script', cursive;
-        font-size: 22px;
-        color: #ff69b4;
         text-align: center;
-        margin: 20px auto;
+        background-color: #fff0f5;
+        color: #ff69b4;
+        padding: 40px;
+      }
+
+      img {
+        width: 300px;
+        border-radius: 15px;
+        margin: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      #contador {
+        font-size: 26px;
+        margin-top: 40px;
+      }
+
+      .secreto {
+        color: #fff0f5;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .secreto:hover {
+        color: #ff1493;
       }
     </style>
   </head>
   <body>
-    <h1>Para Meu Amor</h1>
-    <p>Esse site é uma pequena surpresa para você!</p>
+    <h1>Oi, meu amor!</h1>
+    <p>Esse site é só pra você... Te amo muito!</p>
 
     <!-- CONTADOR -->
     <div id="contador">
       Estamos juntos há <span id="dias">0</span> dias, <span id="horas">0</span> horas e <span id="minutos">0</span> minutos.
     </div>
 
-    <!-- GALERIA DE FOTOS -->
+    <!-- FOTOS -->
     <div class="gallery">
-      <img src="img/1.jpeg" alt="Foto 1" />
-      <img src="img/2.jpeg" alt="Foto 2" />
-      <img src="img/3.jpeg" alt="Foto 3" />
-      <img src="img/4.jpeg" alt="Foto 4" />
+      <img src="img/1.jpeg" alt="foto 1" />
+      <img src="img/2.jpeg" alt="foto 2" />
+      <img src="img/3.jpeg" alt="foto 3" />
+      <img src="img/4.jpeg" alt="foto 4" />
     </div>
 
     <!-- BOTÃO SECRETO -->
@@ -46,17 +71,4 @@
         const agora = new Date();
         const diff = agora - inicio;
 
-        const minutos = Math.floor(diff / (1000 * 60)) % 60;
-        const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
-        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-        document.getElementById("dias").textContent = dias;
-        document.getElementById("horas").textContent = horas;
-        document.getElementById("minutos").textContent = minutos;
-      }
-
-      setInterval(atualizarContador, 1000);
-      atualizarContador();
-    </script>
-  </body>
-</html>
+        const minutos = Math.floor(diff / (1000 *
