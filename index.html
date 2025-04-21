@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Para Meu Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
     <style>
       #contador {
         font-family: 'Dancing Script', cursive;
         font-size: 22px;
         color: #ff69b4;
         text-align: center;
-        margin-top: 20px;
+        margin: 20px auto;
       }
     </style>
   </head>
@@ -26,12 +26,12 @@
       Estamos juntos há <span id="dias">0</span> dias, <span id="horas">0</span> horas e <span id="minutos">0</span> minutos.
     </div>
 
-    <!-- FOTOS -->
+    <!-- GALERIA DE FOTOS -->
     <div class="gallery">
-      <img src="img/1.jpeg" alt="foto 1" />
-      <img src="img/2.jpeg" alt="foto 2" />
-      <img src="img/3.jpeg" alt="foto 3" />
-      <img src="img/4.jpeg" alt="foto 4" />
+      <img src="img/1.jpeg" alt="Foto 1" />
+      <img src="img/2.jpeg" alt="Foto 2" />
+      <img src="img/3.jpeg" alt="Foto 3" />
+      <img src="img/4.jpeg" alt="Foto 4" />
     </div>
 
     <!-- BOTÃO SECRETO -->
@@ -39,7 +39,7 @@
       <button class="secreto">.</button>
     </form>
 
-    <!-- SCRIPT CONTADOR -->
+    <!-- SCRIPT DO CONTADOR -->
     <script>
       function atualizarContador() {
         const inicio = new Date("2022-07-30T00:00:00");
